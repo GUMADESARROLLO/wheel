@@ -1,0 +1,644 @@
+2022-09-22 16:55:50,306 INFO autoreload: Watching for file changes with StatReloader
+2022-09-22 16:55:52,113 ERROR log: Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: app_prize
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/wheel/app/views.py", line 70, in index
+    prizes = get_list_or_404(Prize)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/shortcuts.py", line 96, in get_list_or_404
+    obj_list = list(queryset.filter(*args, **kwargs))
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/malf/Workspace/codecanyon/voucher-wheel/venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: app_prize
+2022-09-22 16:55:52,117 ERROR basehttp: "GET / HTTP/1.1" 500 127514
+2022-09-22 16:55:52,658 WARNING log: Not Found: /favicon.ico
+2022-09-22 16:55:52,658 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2022-09-22 16:57:21,005 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-22 16:57:21,737 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-22 16:57:21,739 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2022-09-22 16:57:22,405 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-22 16:57:28,131 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-22 16:57:28,227 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2022-09-22 16:57:28,233 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2022-09-22 16:57:28,233 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2022-09-22 16:57:28,233 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-22 16:57:29,098 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-22 16:57:29,100 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-22 16:57:29,101 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2022-09-22 16:57:29,109 INFO basehttp: "GET /static/img/favicon.ico/favicon-32x32.png HTTP/1.1" 200 2438
+2022-09-23 18:30:18,045 INFO autoreload: Watching for file changes with StatReloader
+2022-09-23 18:30:20,224 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:30:21,189 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-23 18:30:21,190 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2022-09-23 18:30:21,258 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-23 18:33:31,180 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:33:32,024 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:33:36,940 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:33:37,057 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2022-09-23 18:33:37,069 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2022-09-23 18:33:37,073 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2022-09-23 18:33:37,074 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-23 18:33:37,532 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-23 18:33:37,533 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2022-09-23 18:33:37,539 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-23 18:33:37,548 INFO basehttp: "GET /static/img/favicon.ico/favicon-32x32.png HTTP/1.1" 200 2438
+2022-09-23 18:33:52,189 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:33:54,208 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:31,631 INFO basehttp: "GET /admin HTTP/1.1" 301 0
+2022-09-23 18:34:31,654 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2022-09-23 18:34:31,687 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2022-09-23 18:34:31,789 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2022-09-23 18:34:31,790 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+2022-09-23 18:34:31,791 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 200 939
+2022-09-23 18:34:31,792 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2022-09-23 18:34:31,826 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2022-09-23 18:34:31,839 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+2022-09-23 18:34:31,894 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2022-09-23 18:34:31,903 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2022-09-23 18:34:36,132 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:38,136 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:38,699 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:39,014 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:39,294 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:39,501 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:39,698 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:34:39,927 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:35:23,921 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:35:23,940 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2022-09-23 18:35:23,950 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2022-09-23 18:35:23,953 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2022-09-23 18:35:23,954 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-23 18:35:24,145 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 244376
+2022-09-23 18:35:24,146 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-23 18:35:24,166 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-23 18:35:24,178 INFO basehttp: "GET /static/img/favicon.ico/favicon-32x32.png HTTP/1.1" 200 2438
+2022-09-23 18:37:01,438 INFO views: Draw_new with POST
+2022-09-23 18:37:01,456 ERROR draw: UniqueCode matching query does not exist.
+2022-09-23 18:37:01,463 INFO basehttp: "POST /draw HTTP/1.1" 200 6169
+2022-09-23 18:37:01,505 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2022-09-23 18:37:01,554 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2022-09-23 18:37:10,520 INFO views: Draw with GET for id 1
+2022-09-23 18:37:10,521 INFO views: Prize 1, 10% OFF, True
+2022-09-23 18:37:10,528 INFO basehttp: "GET /1 HTTP/1.1" 200 7088
+2022-09-23 18:54:01,393 INFO basehttp: "GET / HTTP/1.1" 200 7449
+2022-09-23 18:56:01,505 INFO views: Draw_new with POST
+2022-09-23 18:56:01,518 ERROR draw: UniqueCode matching query does not exist.
+2022-09-23 18:56:01,525 INFO basehttp: "POST /draw HTTP/1.1" 200 6169
+2022-09-23 18:56:01,626 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2022-09-23 18:56:10,642 INFO views: Draw with GET for id 2
+2022-09-23 18:56:10,644 INFO views: Prize 2, NO LUCK ..., False
+2022-09-23 18:56:10,652 INFO basehttp: "GET /2 HTTP/1.1" 200 6548
+2022-09-23 18:56:48,926 INFO views: Draw with GET for id 2
+2022-09-23 18:56:48,928 INFO views: Prize 2, NO LUCK ..., False
+2022-09-23 18:56:48,934 INFO basehttp: "GET /2 HTTP/1.1" 200 6548
+2022-09-23 18:57:11,521 INFO views: Draw_new with POST
+2022-09-23 18:57:11,530 ERROR draw: UniqueCode matching query does not exist.
+2022-09-23 18:57:11,540 INFO basehttp: "POST /draw HTTP/1.1" 200 6169
+2022-09-23 18:57:20,631 INFO views: Draw with GET for id 3
+2022-09-23 18:57:20,634 INFO views: Prize 4, NOTHING ..., False
+2022-09-23 18:57:20,641 INFO basehttp: "GET /3 HTTP/1.1" 200 6548
+2022-09-23 18:57:39,586 INFO basehttp: "GET /admin HTTP/1.1" 301 0
+2022-09-23 18:57:39,591 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2022-09-23 18:57:39,615 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2022-09-23 18:57:39,635 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2022-09-23 18:57:39,641 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2022-09-23 18:57:39,644 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 200 939
+2022-09-23 18:57:39,653 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+2022-09-23 18:57:39,654 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+2022-09-23 18:57:39,670 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2022-09-23 18:57:39,727 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2022-09-23 18:57:39,727 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2022-09-23 18:57:39,758 WARNING log: Not Found: /favicon.ico
+2022-09-23 18:57:39,758 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2022-09-23 18:57:44,557 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2022-09-23 18:57:44,575 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2022-09-23 18:57:47,685 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2022-09-23 18:58:02,870 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2022-09-23 18:58:04,808 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2022-09-23 18:58:08,516 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-09-23 18:58:08,545 INFO basehttp: "GET /admin/ HTTP/1.1" 200 4784
+2022-09-23 18:58:08,556 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+2022-09-23 18:58:08,562 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2022-09-23 18:58:08,565 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2022-09-23 18:58:14,006 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6745
+2022-09-23 18:58:14,030 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2022-09-23 18:58:14,034 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+2022-09-23 18:58:14,038 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+2022-09-23 18:58:14,039 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 200 7664
+2022-09-23 18:58:14,042 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+2022-09-23 18:58:14,044 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2022-09-23 18:58:14,048 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:14,049 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+2022-09-23 18:58:14,053 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2022-09-23 18:58:14,055 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+2022-09-23 18:58:14,088 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2022-09-23 18:58:17,297 INFO basehttp: "GET /admin/app/uniquecode/add/ HTTP/1.1" 200 8154
+2022-09-23 18:58:17,315 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+2022-09-23 18:58:17,315 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:17,323 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+2022-09-23 18:58:17,323 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+2022-09-23 18:58:17,326 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2022-09-23 18:58:24,423 INFO basehttp: "POST /admin/app/uniquecode/add/ HTTP/1.1" 302 0
+2022-09-23 18:58:24,462 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9021
+2022-09-23 18:58:24,479 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+2022-09-23 18:58:24,482 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:24,495 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2022-09-23 18:58:26,063 INFO basehttp: "GET /admin/app/uniquecode/1/change/ HTTP/1.1" 200 8419
+2022-09-23 18:58:26,079 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:29,738 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14121
+2022-09-23 18:58:29,754 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:31,538 INFO basehttp: "GET /admin/app/prize/15/change/ HTTP/1.1" 200 7223
+2022-09-23 18:58:31,553 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:33,658 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14121
+2022-09-23 18:58:35,854 INFO basehttp: "GET /admin/app/prize/13/change/ HTTP/1.1" 200 7207
+2022-09-23 18:58:35,870 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:52,377 INFO basehttp: "POST /admin/app/prize/13/change/ HTTP/1.1" 302 0
+2022-09-23 18:58:52,444 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14320
+2022-09-23 18:58:52,462 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:58:54,795 INFO basehttp: "GET /admin/app/prize/9/change/ HTTP/1.1" 200 7205
+2022-09-23 18:58:54,812 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:10,644 INFO basehttp: "POST /admin/app/prize/9/change/ HTTP/1.1" 302 0
+2022-09-23 18:59:10,705 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14307
+2022-09-23 18:59:10,722 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:16,361 INFO basehttp: "GET /admin/app/prize/6/change/ HTTP/1.1" 200 7217
+2022-09-23 18:59:16,378 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:22,136 INFO basehttp: "POST /admin/app/prize/6/change/ HTTP/1.1" 302 0
+2022-09-23 18:59:22,204 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14312
+2022-09-23 18:59:22,223 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:27,651 INFO basehttp: "GET /admin/app/prize/15/change/ HTTP/1.1" 200 7223
+2022-09-23 18:59:27,667 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:45,481 INFO basehttp: "POST /admin/app/prize/15/change/ HTTP/1.1" 302 0
+2022-09-23 18:59:45,545 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14306
+2022-09-23 18:59:45,563 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:48,992 INFO basehttp: "GET /admin/app/prize/15/change/ HTTP/1.1" 200 7203
+2022-09-23 18:59:49,009 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:53,379 INFO basehttp: "POST /admin/app/prize/15/change/ HTTP/1.1" 302 0
+2022-09-23 18:59:53,448 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14308
+2022-09-23 18:59:53,466 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:55,068 INFO basehttp: "GET /admin/app/prize/6/change/ HTTP/1.1" 200 7209
+2022-09-23 18:59:55,085 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 18:59:59,191 INFO basehttp: "POST /admin/app/prize/6/change/ HTTP/1.1" 302 0
+2022-09-23 18:59:59,255 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14306
+2022-09-23 18:59:59,270 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 19:00:03,147 INFO basehttp: "GET /admin/app/prize/13/change/ HTTP/1.1" 200 7207
+2022-09-23 19:00:03,162 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 19:00:07,361 INFO basehttp: "GET / HTTP/1.1" 200 7436
+2022-09-23 19:00:07,429 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2022-09-23 19:00:23,679 INFO basehttp: "POST /admin/app/prize/13/change/ HTTP/1.1" 302 0
+2022-09-23 19:00:23,753 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14307
+2022-09-23 19:00:23,769 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2022-09-23 19:00:30,229 INFO basehttp: "GET / HTTP/1.1" 200 7436
+2022-09-23 19:00:43,908 INFO views: Draw_new with POST
+2022-09-23 19:00:43,928 INFO basehttp: "POST /draw HTTP/1.1" 200 6157
+2022-09-23 19:00:53,016 INFO views: Draw with GET for id 4
+2022-09-23 19:00:53,020 INFO views: Prize 11, 25% OFF, True
+2022-09-23 19:00:53,031 INFO basehttp: "GET /4 HTTP/1.1" 200 7077
+2022-09-24 08:46:20,475 INFO basehttp: "GET / HTTP/1.1" 200 7436
+2022-09-24 08:46:20,525 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2022-09-24 08:46:20,528 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2022-09-24 08:46:20,529 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2022-09-24 08:46:20,531 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-24 08:46:20,693 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 244376
+2022-09-24 08:46:20,694 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-24 08:46:20,695 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-24 08:46:20,711 INFO basehttp: "GET /static/img/favicon.ico/favicon-32x32.png HTTP/1.1" 200 2438
+2022-09-26 20:49:47,447 INFO autoreload: Watching for file changes with StatReloader
+2022-09-26 20:49:52,352 INFO basehttp: "GET / HTTP/1.1" 200 7436
+2022-09-26 20:49:52,779 INFO basehttp: "GET /static/img/logo.png HTTP/1.1" 200 11712
+2022-09-26 20:49:54,178 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2022-09-26 20:49:54,182 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2022-09-26 20:49:54,201 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2022-09-26 20:49:54,210 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2022-09-26 21:05:25,920 INFO basehttp: "GET / HTTP/1.1" 200 7436
+2022-09-26 21:05:26,107 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 123645
+2022-09-26 21:05:26,180 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2022-09-26 21:05:26,641 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 123645
+2022-09-26 21:05:59,008 INFO basehttp: "GET / HTTP/1.1" 200 7456
+2022-09-26 21:05:59,282 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:06:05,507 INFO basehttp: "GET / HTTP/1.1" 200 7457
+2022-09-26 21:06:10,358 INFO basehttp: "GET / HTTP/1.1" 200 7457
+2022-09-26 21:06:15,191 INFO basehttp: "GET / HTTP/1.1" 200 7457
+2022-09-26 21:06:15,279 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:08:34,326 INFO basehttp: "GET / HTTP/1.1" 200 7457
+2022-09-26 21:08:34,509 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 124205
+2022-09-26 21:12:27,192 INFO basehttp: "GET / HTTP/1.1" 200 7713
+2022-09-26 21:12:27,369 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:12:27,444 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2022-09-26 21:14:13,368 INFO basehttp: "GET / HTTP/1.1" 200 7733
+2022-09-26 21:14:13,540 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:14:26,553 INFO basehttp: "GET / HTTP/1.1" 200 7732
+2022-09-26 21:15:13,575 INFO basehttp: "GET / HTTP/1.1" 200 7687
+2022-09-26 21:15:13,778 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:15:23,552 INFO basehttp: "GET / HTTP/1.1" 200 7749
+2022-09-26 21:15:51,299 INFO basehttp: "GET / HTTP/1.1" 200 7703
+2022-09-26 21:16:44,134 INFO basehttp: "GET / HTTP/1.1" 200 7751
+2022-09-26 21:16:44,392 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 304 0
+2022-09-26 21:16:44,487 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 304 0
+2023-08-05 15:40:40,113 INFO autoreload: Watching for file changes with StatReloader
+2023-08-05 15:41:06,097 INFO basehttp: "GET / HTTP/1.1" 200 7460
+2023-08-05 15:41:06,215 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2023-08-05 15:41:06,234 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2023-08-05 15:41:06,240 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2023-08-05 15:41:06,457 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 124205
+2023-08-05 15:41:06,852 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2023-08-05 15:41:06,866 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2023-08-05 15:41:06,876 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2023-08-05 15:41:06,880 INFO basehttp: "GET /static/img/favicon.ico/favicon-16x16.png HTTP/1.1" 200 1534
+2023-08-05 15:41:06,894 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2023-08-05 15:42:03,055 INFO basehttp: "GET /admin HTTP/1.1" 301 0
+2023-08-05 15:42:03,159 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-05 15:42:03,247 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-05 15:42:03,385 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2023-08-05 15:42:03,387 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2023-08-05 15:42:03,389 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+2023-08-05 15:42:03,397 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 200 939
+2023-08-05 15:42:03,402 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+2023-08-05 15:42:03,425 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2023-08-05 15:42:03,517 WARNING log: Not Found: /favicon.ico
+2023-08-05 15:42:03,519 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-05 15:42:03,541 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2023-08-05 15:42:03,544 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2023-08-05 15:42:10,196 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2379
+2023-08-05 15:42:10,362 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2023-08-05 15:42:15,423 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2379
+2023-08-05 15:42:15,630 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 15:42:15,635 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 15:42:15,640 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 15:42:15,641 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 15:42:15,642 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 15:42:15,676 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 15:42:20,935 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 15:42:23,924 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 15:42:46,837 INFO basehttp: "GET / HTTP/1.1" 200 7460
+2023-08-05 15:43:42,344 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-05 15:43:42,412 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-05 15:43:42,571 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 15:43:42,573 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 15:43:42,576 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 15:43:42,577 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 15:43:42,580 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 15:43:42,616 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 15:43:42,649 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2023-08-05 15:43:42,655 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2023-08-05 15:43:45,921 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 15:43:46,085 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2023-08-05 15:44:11,363 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 15:44:11,518 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 15:44:11,522 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 15:44:11,525 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 15:44:11,527 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 15:44:11,528 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 15:44:11,557 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:02:29,978 INFO autoreload: Watching for file changes with StatReloader
+2023-08-05 16:02:37,741 INFO basehttp: "GET / HTTP/1.1" 200 7460
+2023-08-05 16:02:43,301 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-05 16:02:43,372 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-05 16:02:43,666 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+2023-08-05 16:02:43,670 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 200 939
+2023-08-05 16:02:43,671 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2023-08-05 16:02:43,673 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2023-08-05 16:02:43,674 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+2023-08-05 16:02:43,692 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2023-08-05 16:02:48,600 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:02:48,775 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:02:48,778 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:02:48,783 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 16:02:48,787 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:02:48,788 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:02:48,814 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:03:03,777 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:03:03,929 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:03:03,932 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:03:03,934 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:03:03,935 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 16:03:03,937 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:03:03,963 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:03:10,616 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:03:10,786 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:03:10,796 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:03:10,802 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 16:03:10,803 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:03:10,806 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:03:10,823 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:03:42,537 INFO basehttp: "GET / HTTP/1.1" 200 7460
+2023-08-05 16:03:52,196 INFO views: Draw_new with POST
+2023-08-05 16:03:52,241 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:03:52,257 INFO basehttp: "POST /draw HTTP/1.1" 200 6180
+2023-08-05 16:04:01,480 INFO views: Draw with GET for id 5
+2023-08-05 16:04:01,484 INFO views: Prize 9, PS5, False
+2023-08-05 16:04:01,505 INFO basehttp: "GET /5 HTTP/1.1" 200 6556
+2023-08-05 16:04:04,125 INFO basehttp: "GET /?csrfmiddlewaretoken=AdVmhxYOFSj08qf1w10r8jPxazAvmxtq2iWiJVNoSorreZnw6rftOgqrzdJ45xGP HTTP/1.1" 200 7460
+2023-08-05 16:04:10,222 INFO views: Draw_new with POST
+2023-08-05 16:04:10,246 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:04:10,265 INFO basehttp: "POST /draw HTTP/1.1" 200 6180
+2023-08-05 16:04:19,515 INFO views: Draw with GET for id 6
+2023-08-05 16:04:19,528 INFO views: Prize 15, BAD LUCK!, False
+2023-08-05 16:04:19,545 INFO basehttp: "GET /6 HTTP/1.1" 200 6556
+2023-08-05 16:04:26,286 INFO basehttp: "GET /?csrfmiddlewaretoken=v23TieLUKcBdIZpTxO51P7u7Nm2Lqv4dX74PKCAuXIJEOyxo7ek3v451c0bk9vhC HTTP/1.1" 200 7460
+2023-08-05 16:04:32,192 INFO basehttp: "GET /?admin HTTP/1.1" 200 7460
+2023-08-05 16:04:36,780 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-05 16:04:36,870 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-05 16:04:36,959 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:04:36,968 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:04:36,970 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 16:04:36,971 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:04:36,971 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:04:37,041 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:04:37,089 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2023-08-05 16:04:37,099 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2023-08-05 16:28:46,359 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:28:46,548 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:28:46,550 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:28:46,551 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:28:46,559 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-05 16:28:46,563 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:28:46,608 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2023-08-05 16:28:46,742 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2023-08-05 16:30:33,974 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:30:37,401 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:30:40,693 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2378
+2023-08-05 16:42:52,646 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2023-08-05 16:42:52,732 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7116
+2023-08-05 16:42:52,913 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:42:52,914 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:42:52,918 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:42:52,919 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:42:52,934 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+2023-08-05 16:42:52,954 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:42:52,974 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2023-08-05 16:42:52,978 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2023-08-05 16:43:02,738 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 12763
+2023-08-05 16:43:02,883 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+2023-08-05 16:43:02,886 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2023-08-05 16:43:02,892 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+2023-08-05 16:43:02,895 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 200 7664
+2023-08-05 16:43:02,899 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+2023-08-05 16:43:02,899 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+2023-08-05 16:43:02,910 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+2023-08-05 16:43:02,915 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2023-08-05 16:43:02,930 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:02,934 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2023-08-05 16:43:02,943 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2023-08-05 16:43:02,944 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+2023-08-05 16:43:03,026 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2023-08-05 16:43:06,427 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14108
+2023-08-05 16:43:06,537 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:06,553 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2023-08-05 16:43:08,245 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8801
+2023-08-05 16:43:08,346 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:12,899 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 12763
+2023-08-05 16:43:13,013 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:15,828 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14108
+2023-08-05 16:43:15,936 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:17,497 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8801
+2023-08-05 16:43:17,579 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:19,199 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 12763
+2023-08-05 16:43:19,320 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:29,728 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 200 6350
+2023-08-05 16:43:29,894 INFO basehttp: "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+2023-08-05 16:43:32,280 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 302 0
+2023-08-05 16:43:32,384 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7672
+2023-08-05 16:43:32,497 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:34,402 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14108
+2023-08-05 16:43:34,519 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:48,274 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8801
+2023-08-05 16:43:48,398 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:43:58,592 INFO basehttp: "GET / HTTP/1.1" 200 7460
+2023-08-05 16:43:59,304 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2023-08-05 16:43:59,317 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 124205
+2023-08-05 16:43:59,692 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2023-08-05 16:43:59,732 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2023-08-05 16:43:59,735 INFO basehttp: "GET /static/img/favicon.ico/favicon-16x16.png HTTP/1.1" 200 1534
+2023-08-05 16:44:05,394 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14108
+2023-08-05 16:44:05,518 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2023-08-05 16:44:05,528 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:06,990 INFO basehttp: "GET /admin/app/prize/15/change/ HTTP/1.1" 200 7207
+2023-08-05 16:44:07,116 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2023-08-05 16:44:07,135 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+2023-08-05 16:44:07,137 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+2023-08-05 16:44:07,139 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:07,168 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+2023-08-05 16:44:14,377 INFO basehttp: "POST /admin/app/prize/15/change/ HTTP/1.1" 302 0
+2023-08-05 16:44:14,562 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14305
+2023-08-05 16:44:14,673 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:17,439 INFO basehttp: "GET / HTTP/1.1" 200 7459
+2023-08-05 16:44:41,710 INFO basehttp: "GET /admin/app/prize/14/change/ HTTP/1.1" 200 7203
+2023-08-05 16:44:41,828 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:45,441 INFO basehttp: "POST /admin/app/prize/14/change/ HTTP/1.1" 302 0
+2023-08-05 16:44:45,627 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14307
+2023-08-05 16:44:45,746 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:47,456 INFO basehttp: "GET /admin/app/prize/13/change/ HTTP/1.1" 200 7207
+2023-08-05 16:44:47,611 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:51,477 INFO basehttp: "POST /admin/app/prize/13/change/ HTTP/1.1" 302 0
+2023-08-05 16:44:51,658 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14306
+2023-08-05 16:44:51,755 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:53,471 INFO basehttp: "GET /admin/app/prize/12/change/ HTTP/1.1" 200 7199
+2023-08-05 16:44:53,574 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:44:56,747 INFO basehttp: "POST /admin/app/prize/12/change/ HTTP/1.1" 302 0
+2023-08-05 16:44:56,937 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14307
+2023-08-05 16:44:57,031 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:45:05,553 INFO basehttp: "GET / HTTP/1.1" 200 7461
+2023-08-05 16:45:06,577 INFO basehttp: "GET / HTTP/1.1" 200 7461
+2023-08-05 16:45:18,358 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8801
+2023-08-05 16:45:18,479 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:45:30,815 INFO views: Draw_new with POST
+2023-08-05 16:45:30,821 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 16:45:30,850 INFO basehttp: "POST /draw HTTP/1.1" 200 7622
+2023-08-05 16:45:36,171 INFO basehttp: "GET /admin/app/uniquecode/1/change/ HTTP/1.1" 200 8412
+2023-08-05 16:45:36,286 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:46:07,129 INFO basehttp: "POST /admin/app/uniquecode/1/change/ HTTP/1.1" 302 0
+2023-08-05 16:46:07,324 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9022
+2023-08-05 16:46:07,488 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:46:10,139 INFO basehttp: "GET /admin/app/uniquecode/add/ HTTP/1.1" 200 8142
+2023-08-05 16:46:10,345 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:46:18,752 INFO basehttp: "POST /admin/app/uniquecode/add/ HTTP/1.1" 302 0
+2023-08-05 16:46:18,929 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9527
+2023-08-05 16:46:19,082 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:46:25,103 INFO basehttp: "GET /admin/app/uniquecode/2/change/ HTTP/1.1" 200 8412
+2023-08-05 16:46:25,241 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:46:31,609 INFO views: Draw_new with POST
+2023-08-05 16:46:31,617 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 16:46:31,652 INFO basehttp: "POST /draw HTTP/1.1" 200 7622
+2023-08-05 16:46:44,888 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9308
+2023-08-05 16:46:45,004 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:00,543 INFO views: Draw_new with POST
+2023-08-05 16:47:00,551 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:47:00,552 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 16:47:00,574 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:47:00,587 INFO basehttp: "POST /draw HTTP/1.1" 200 7621
+2023-08-05 16:47:17,862 INFO views: Draw_new with POST
+2023-08-05 16:47:17,868 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:47:17,869 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 16:47:17,885 ERROR draw: UniqueCode matching query does not exist.
+2023-08-05 16:47:17,894 INFO basehttp: "POST /draw HTTP/1.1" 200 7621
+2023-08-05 16:47:25,824 INFO basehttp: "POST /admin/app/uniquecode/ HTTP/1.1" 200 5783
+2023-08-05 16:47:25,985 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:47:25,988 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2023-08-05 16:47:25,993 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-08-05 16:47:25,997 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,007 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,013 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,022 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,026 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,032 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-08-05 16:47:26,040 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:47:26,061 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2023-08-05 16:47:26,066 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:47:26,153 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:47:26,215 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-05 16:47:27,967 INFO basehttp: "POST /admin/app/uniquecode/ HTTP/1.1" 302 0
+2023-08-05 16:47:28,051 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6887
+2023-08-05 16:47:28,340 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:28,354 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2023-08-05 16:47:28,460 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2023-08-05 16:47:28,463 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-08-05 16:47:30,664 INFO basehttp: "GET /admin/auth/user/ HTTP/1.1" 200 9298
+2023-08-05 16:47:30,802 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:30,819 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2023-08-05 16:47:30,908 INFO basehttp: "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+2023-08-05 16:47:37,006 INFO basehttp: "POST /admin/auth/user/ HTTP/1.1" 200 5596
+2023-08-05 16:47:37,123 INFO basehttp: "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+2023-08-05 16:47:38,290 INFO basehttp: "POST /admin/auth/user/ HTTP/1.1" 302 0
+2023-08-05 16:47:38,417 INFO basehttp: "GET /admin/auth/user/ HTTP/1.1" 200 9036
+2023-08-05 16:47:38,549 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:43,783 INFO basehttp: "GET /admin/auth/group/ HTTP/1.1" 200 5828
+2023-08-05 16:47:43,880 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:45,779 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6745
+2023-08-05 16:47:45,868 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:47,159 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14109
+2023-08-05 16:47:47,278 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:47,283 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2023-08-05 16:47:49,998 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-05 16:47:50,101 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:54,900 INFO basehttp: "GET /admin/app/draw/add/ HTTP/1.1" 200 10262
+2023-08-05 16:47:55,019 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:47:55,065 INFO basehttp: "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2023-08-05 16:47:55,076 INFO basehttp: "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19634
+2023-08-05 16:47:55,168 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-05 16:47:55,392 INFO basehttp: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2023-08-05 16:47:55,396 INFO basehttp: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2023-08-05 16:48:24,256 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-05 16:48:24,433 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:48:34,471 INFO basehttp: "GET /admin/app/draw/add/ HTTP/1.1" 200 10262
+2023-08-05 16:48:34,614 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:48:34,625 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2023-08-05 16:48:34,626 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2023-08-05 16:48:34,634 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2023-08-05 16:48:34,687 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2023-08-05 16:49:01,891 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6745
+2023-08-05 16:49:02,062 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:04,825 INFO basehttp: "GET /admin/auth/group/ HTTP/1.1" 200 5828
+2023-08-05 16:49:04,982 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:06,569 INFO basehttp: "GET /admin/auth/user/ HTTP/1.1" 200 8902
+2023-08-05 16:49:06,696 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:10,115 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-05 16:49:10,233 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:11,763 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6745
+2023-08-05 16:49:11,914 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:13,401 INFO basehttp: "GET /admin/app/uniquecode/add/ HTTP/1.1" 200 8142
+2023-08-05 16:49:13,546 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:20,572 INFO basehttp: "POST /admin/app/uniquecode/add/ HTTP/1.1" 302 0
+2023-08-05 16:49:20,685 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9018
+2023-08-05 16:49:20,847 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:23,697 INFO basehttp: "GET /admin/app/uniquecode/3/change/ HTTP/1.1" 200 8412
+2023-08-05 16:49:23,810 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:31,350 INFO views: Draw_new with POST
+2023-08-05 16:49:31,373 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 16:49:31,410 INFO basehttp: "POST /draw HTTP/1.1" 200 7622
+2023-08-05 16:49:42,347 INFO basehttp: "POST /admin/app/uniquecode/3/change/ HTTP/1.1" 302 0
+2023-08-05 16:49:42,477 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9021
+2023-08-05 16:49:42,600 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:45,407 INFO basehttp: "GET /admin/app/uniquecode/3/change/ HTTP/1.1" 200 8407
+2023-08-05 16:49:45,528 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:49:47,766 INFO views: Draw_new with POST
+2023-08-05 16:49:47,827 INFO basehttp: "POST /draw HTTP/1.1" 200 6182
+2023-08-05 16:49:57,073 INFO views: Draw with GET for id 7
+2023-08-05 16:49:57,077 INFO views: Prize 1, 10% OFF, True
+2023-08-05 16:49:57,095 INFO basehttp: "GET /7 HTTP/1.1" 200 7105
+2023-08-05 16:50:04,331 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 16:50:04,442 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:10,143 INFO basehttp: "GET /admin/app/uniquecode/3/change/ HTTP/1.1" 200 8412
+2023-08-05 16:50:10,298 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:13,685 INFO basehttp: "POST /admin/app/uniquecode/3/change/ HTTP/1.1" 302 0
+2023-08-05 16:50:13,805 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 9021
+2023-08-05 16:50:13,957 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:25,659 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14109
+2023-08-05 16:50:25,759 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:27,086 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 9912
+2023-08-05 16:50:27,207 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:36,126 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 16:50:36,259 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:37,990 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 9912
+2023-08-05 16:50:38,141 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:50:41,481 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 200 5593
+2023-08-05 16:50:43,888 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 302 0
+2023-08-05 16:50:43,977 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7671
+2023-08-05 16:50:44,097 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:53:25,844 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-05 16:53:25,952 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 16:53:25,954 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 16:53:25,957 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-05 16:53:25,961 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-05 16:53:25,966 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-08-05 16:53:26,019 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 16:53:26,036 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-05 16:53:26,039 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-05 16:53:26,052 INFO basehttp: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+2023-08-05 16:53:30,316 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 16:53:30,442 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,449 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,451 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,460 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,465 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,467 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,469 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,470 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2023-08-05 16:53:30,478 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 16:53:30,480 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2023-08-05 16:53:30,524 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2023-08-05 16:53:30,596 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-08-05 16:53:36,782 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7461
+2023-08-05 16:54:20,450 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7466
+2023-08-05 16:54:52,736 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7488
+2023-08-05 16:55:17,488 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7503
+2023-08-05 16:55:44,019 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7503
+2023-08-05 16:56:16,721 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7506
+2023-08-05 16:57:18,439 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7506
+2023-08-05 16:59:17,775 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7447
+2023-08-05 16:59:38,256 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7489
+2023-08-05 16:59:39,891 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7489
+2023-08-05 16:59:52,418 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7488
+2023-08-05 16:59:56,383 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7492
+2023-08-05 17:00:26,991 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7501
+2023-08-05 17:01:48,640 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7501
