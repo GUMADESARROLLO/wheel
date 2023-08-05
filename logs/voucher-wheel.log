@@ -642,3 +642,84 @@ django.db.utils.OperationalError: no such table: app_prize
 2023-08-05 16:59:56,383 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7492
 2023-08-05 17:00:26,991 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7501
 2023-08-05 17:01:48,640 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7501
+2023-08-05 19:12:36,508 INFO basehttp: "GET /?csrfmiddlewaretoken=romcZTiHEnjXUG7QtLG5LdETIRnutERPyMu1vVDsYNGXPx2yboBlVcHdzthcVkYH HTTP/1.1" 200 7501
+2023-08-05 19:12:36,813 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2023-08-05 19:12:46,741 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 19:12:46,830 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2023-08-05 19:12:46,849 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,860 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,864 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,871 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,872 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+2023-08-05 19:12:46,873 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2023-08-05 19:12:46,878 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,879 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,944 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,948 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-08-05 19:12:46,950 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-05 19:12:46,952 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-05 19:12:46,953 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:12:46,954 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-08-05 19:12:47,043 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2023-08-05 19:12:47,055 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-05 19:12:47,058 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-08-05 19:12:56,348 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-05 19:12:56,485 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:12:56,496 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2023-08-05 19:12:59,509 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14109
+2023-08-05 19:12:59,656 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:12:59,743 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2023-08-05 19:13:01,500 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 19:13:01,608 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:14:31,584 INFO basehttp: "GET / HTTP/1.1" 200 7501
+2023-08-05 19:14:31,630 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2023-08-05 19:14:31,690 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2023-08-05 19:14:31,691 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2023-08-05 19:14:31,699 INFO basehttp: "GET /static/img/logo.svg HTTP/1.1" 200 124205
+2023-08-05 19:14:32,218 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2023-08-05 19:14:32,274 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2023-08-05 19:14:32,524 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2023-08-05 19:14:32,595 INFO basehttp: "GET /static/img/favicon.ico/apple-icon-180x180.png HTTP/1.1" 200 18486
+2023-08-05 19:14:32,595 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2023-08-05 19:14:43,591 INFO basehttp: "GET / HTTP/1.1" 200 7501
+2023-08-05 19:16:22,976 INFO views: Draw_new with POST
+2023-08-05 19:16:23,023 INFO basehttp: "POST /draw HTTP/1.1" 200 6187
+2023-08-05 19:16:32,160 INFO views: Draw with GET for id 8
+2023-08-05 19:16:32,163 INFO views: Prize 1, 10% OFF, True
+2023-08-05 19:16:32,176 INFO basehttp: "GET /8 HTTP/1.1" 200 7094
+2023-08-05 19:16:43,834 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 19:16:43,921 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:16:46,492 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 9912
+2023-08-05 19:16:46,616 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:16:53,424 INFO basehttp: "GET /admin/app/draw/8/change/ HTTP/1.1" 200 10640
+2023-08-05 19:16:53,549 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:16:53,581 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2023-08-05 19:16:53,595 INFO basehttp: "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+2023-08-05 19:16:53,599 INFO basehttp: "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+2023-08-05 19:16:53,620 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2023-08-05 19:16:53,621 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2023-08-05 19:16:53,662 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2023-08-05 19:16:53,758 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-05 19:16:53,822 INFO basehttp: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+2023-08-05 19:16:53,847 INFO basehttp: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+2023-08-05 19:16:56,423 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 9912
+2023-08-05 19:16:56,564 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:17:01,832 INFO basehttp: "GET /admin/app/draw/8/change/ HTTP/1.1" 200 10640
+2023-08-05 19:17:01,983 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:17:12,840 INFO basehttp: "GET /?csrfmiddlewaretoken=uHmzVEBAnNnfHGJdK12O4KN55aibN8pdZXCyTgBbAS5414WBXCLcauejfJPT2TeQ HTTP/1.1" 200 7501
+2023-08-05 19:17:30,752 INFO basehttp: "GET /admin/app/prize/1/change/?_to_field=id&_popup=1 HTTP/1.1" 200 3703
+2023-08-05 19:17:30,852 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:17:52,254 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 9912
+2023-08-05 19:17:52,373 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:18:01,785 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-05 19:18:01,913 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-05 19:18:15,493 INFO views: Draw_new with POST
+2023-08-05 19:18:15,503 WARNING views: invalid form else => False <ul class="errorlist"><li>code<ul class="errorlist"><li>Invalid or expired code!</li></ul></li></ul>
+2023-08-05 19:18:15,523 INFO basehttp: "POST /draw HTTP/1.1" 200 7657
+2023-08-05 19:20:19,396 INFO basehttp: - Broken pipe from ('192.168.1.17', 33298)
+
+2023-08-05 19:20:19,397 INFO basehttp: - Broken pipe from ('192.168.1.17', 33308)
+
+2023-08-05 19:20:19,397 INFO basehttp: - Broken pipe from ('192.168.1.17', 33292)
+
+2023-08-05 19:20:24,625 INFO basehttp: "GET /admin/logout/ HTTP/1.1" 200 1532
