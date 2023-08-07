@@ -6,7 +6,7 @@ from django.contrib import admin
 class DrawAdmin(admin.ModelAdmin):
     list_display = ['id', 'date', 'code', 'prize', 'winner', 'try_again', 'retry_used']
     list_filter = ['prize__winner', 'prize__try_again', 'retry_used', 'date']
-    search_fields = ['code', 'email', 'prize__label']
+    search_fields = ['code', 'Info', 'prize__label']
     list_display_links = ['id', 'date', 'code']
 
     def winner(self, obj):
