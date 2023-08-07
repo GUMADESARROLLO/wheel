@@ -21,7 +21,7 @@ class Draw(models.Model):
     retry_used = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.email} - {self.code}"
+        return f"{self.Info} - {self.code}"
 
     def use_retry(self):
         self.retry_used = True
