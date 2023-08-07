@@ -12,7 +12,7 @@ class Draw(models.Model):
     """
     Class to represent each valid draw that happened in the system.
     """
-    email = models.EmailField(blank=False)
+    email = models.CharField(blank=False)
     code = models.CharField(max_length=8)
     sent = models.BooleanField(default=False)
     rotation = models.IntegerField(default=0)
