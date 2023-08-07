@@ -22,4 +22,4 @@ class DrawForm(forms.ModelForm):
         code = cleaned_data.get("code")
 
         if is_code_valid(code) is not True:
-            self.add_error('code', forms.ValidationError("Invalid or expired code!"))
+            self.add_error('code', forms.ValidationError("¡Código no válido o caducado!"))

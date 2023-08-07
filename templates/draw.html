@@ -3,12 +3,12 @@
 
 {% block content %}
   {% if result_prize.winner %}
-    <h1 class="blinking h1 mt-2 mb-5 font-weight-normal" style="color: white; text-transform:uppercase;">
-      Congratulations!!</h1>
+    <h1 class="blinking h1 mt-2 mb-5 font-weight-normal¡Felicidades!" style="color: white; text-transform:uppercase;">
+      ¡Felicidades!!!</h1>
 
     <h4 class="h4 mb-4 font-weight-normal" style="color: white;">
-      The administrator is already aware of your prize and will contact you shortly to let you know how to receive it.
-      Your details were successfully stored:</h4>
+      El administrador ya conoce tu premio y en breve se pondrá en contacto contigo para informarte cómo recibirlo.
+      Sus datos se almacenaron con éxito:</h4>
 
     <div class="card mb-4">
       <div class="card-body">
@@ -36,7 +36,7 @@
       {{ result_draw.use_retry }}
 
       <h4 class="h4 mb-5 font-weight-normal" style="color: white;">
-        You have just won a free spin! Please click on the button below to try again!</h4>
+        ¡Acabas de ganar un giro gratis! Por favor, haga clic en el botón de abajo para intentarlo de nuevo!</h4>
 
       <div class="mt-5">
         <form class="form-signin" method="POST" action="{% url 'wheel:draw_spin' %}">
@@ -45,7 +45,7 @@
                  id="id_login" value="{{ result_draw.login }}">
           <input type="hidden" name="code" maxlength="8" class="form-control form-control-lg" required="" id="id_code"
                  value="{{ result_draw.code }}">
-          <button class="mt2 btn btn-lg btn-primary btn-block" type="submit">Spin again for free!</button>
+          <button class="mt2 btn btn-lg btn-primary btn-block" type="submit">¡Gira de nuevo gratis!</button>
         </form>
       </div>
     {% endif %}
@@ -56,12 +56,12 @@
         Your retry was already used...</h4>
     {% endif %}
     <h4 class="h4 mb-5 font-weight-normal" style="color: white;">
-      If you have more code vouchers to use, please click on the button below to return to the main page.</h4>
+      Si tiene más vales de código para usar, haga clic en el botón a continuación para volver a la página principal.</h4>
 
     <div class="mt-5">
       <form action="{% url 'wheel:index' %}">
         {% csrf_token %}
-        <button class="mt2 btn btn-lg btn-primary btn-block" type="submit">Enter a new code!</button>
+        <button class="mt2 btn btn-lg btn-primary btn-block" type="submit">¡Introduce un nuevo código!</button>
       </form>
 
     </div>
