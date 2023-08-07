@@ -51,9 +51,6 @@
   <div class="col-sm-5 my-auto">
     <div class="row no-gutters no-border rounded overflow-hidden flex-md-row mb-4 ml-4 mr-4 shadow-sm h-md-250 position-relative">
     <div class="container">
-      <a href="{% url 'wheel:index' %}">
-        <img alt="Voucher Wheel logo" class="mx-auto d-block img-fluid" style="width: 20ex;" src="{% static 'img/logo.svg' %}">
-      </a>
       {% block content %}{% endblock %}
       <p class="mt-3 mb-3 text-muted"><a href="https://www.unimarksa.com/">UNIMARK S,A.</a> © {% now 'Y' %}</p>
     </div>
