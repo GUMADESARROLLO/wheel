@@ -4,7 +4,7 @@ from django.contrib import admin
 
 @admin.register(Draw)
 class DrawAdmin(admin.ModelAdmin):
-    list_display = ['id', 'date', 'code', 'prize', 'winner', 'try_again', 'retry_used']
+    list_display = ['id', 'date', 'Info' ,'code', 'prize', 'winner', 'try_again', 'retry_used']
     list_filter = ['prize__winner', 'prize__try_again', 'retry_used', 'date']
     search_fields = ['code', 'Info', 'prize__label']
     list_display_links = ['id', 'date', 'code']
