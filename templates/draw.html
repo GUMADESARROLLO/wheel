@@ -12,15 +12,17 @@
 
     <div class="card mb-4">
       <div class="card-body">
-        <p style="color: black" class="col-form-label col-form-label-lg">Info.: {{ result_draw.Info }}</p>
+        <p style="color: black" class="col-form-label col-form-label-lg">Nombre.: {{ result_draw.name }}</p>
+        <p style="color: black" class="col-form-label col-form-label-lg">Tel..: {{ result_draw.Phone }}</p>
+        <p style="color: black" class="col-form-label col-form-label-lg">Cedula.: {{ result_draw.Number }}</p>
         <p style="color: black" class="col-form-label col-form-label-lg">Premio: {{ result_prize.label }}</p>
       </div>
     </div>
 
   {% else %}
     {% if result_prize.try_again and not result_draw.retry_used %}
-      <h1 class="blinking h1 mt-2 mb-5 font-weight-normal" style="color: white; text-transform:uppercase;">Try
-        again!</h1>
+      <h1 class="blinking h1 mt-2 mb-5 font-weight-normal" style="color: white; text-transform:uppercase;">¡Intentar
+        de nuevo!</h1>
     {% else %}
       <h1 class="h1 mt-2 mb-5 font-weight-normal" style="color: white; text-transform:uppercase;">mejor suerte la proxima!</h1>
     {% endif %}

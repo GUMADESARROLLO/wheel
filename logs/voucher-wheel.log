@@ -730,3 +730,465 @@ django.db.utils.OperationalError: no such table: app_prize
 2023-08-08 21:59:20,856 INFO autoreload: /app/app/migrations/0001_initial.py changed, reloading.
 2023-08-08 21:59:23,366 INFO autoreload: Watching for file changes with StatReloader
 2023-08-08 21:59:25,143 INFO basehttp: "GET / HTTP/1.1" 200 7379
+2023-08-09 16:51:15,070 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:51:24,185 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-09 16:51:24,275 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-09 16:51:24,417 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 16:51:24,419 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-09 16:51:24,435 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+2023-08-09 16:51:24,436 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2023-08-09 16:51:24,450 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+2023-08-09 16:51:24,473 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2023-08-09 16:51:24,535 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2023-08-09 16:51:24,541 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2023-08-09 16:51:24,587 WARNING log: Not Found: /favicon.ico
+2023-08-09 16:51:24,589 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-09 16:51:28,718 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:51:28,870 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2023-08-09 16:51:54,791 INFO views: Draw_new with POST
+2023-08-09 16:51:54,882 ERROR log: Internal Server Error: /draw
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: table app_draw has no column named name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/app/views.py", line 41, in draw_spin
+    instance.save()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: table app_draw has no column named name
+2023-08-09 16:51:54,898 ERROR basehttp: "POST /draw HTTP/1.1" 500 144599
+2023-08-09 16:52:19,641 INFO views: Draw_new with POST
+2023-08-09 16:52:19,685 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 16:52:19,697 INFO basehttp: "POST /draw HTTP/1.1" 200 6051
+2023-08-09 16:52:28,859 INFO views: Draw with GET for id 9
+2023-08-09 16:52:28,871 INFO views: Prize 9, PS5, False
+2023-08-09 16:52:28,888 INFO basehttp: "GET /9 HTTP/1.1" 200 6440
+2023-08-09 16:52:46,359 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:53:12,500 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:53:19,098 INFO autoreload: /app/app/migrations/0001_initial.py changed, reloading.
+2023-08-09 16:53:21,081 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:53:30,838 INFO autoreload: /app/app/models.py changed, reloading.
+2023-08-09 16:53:32,268 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:53:37,660 INFO autoreload: /app/app/models.py changed, reloading.
+2023-08-09 16:53:39,085 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:53:45,895 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:56:04,368 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:56:08,918 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:57:08,609 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 16:57:14,139 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 16:57:29,169 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 16:57:31,053 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:05,580 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:01:07,551 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:08,807 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:01:10,330 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:11,619 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:01:13,327 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:22,147 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 17:01:31,489 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:01:32,966 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:53,090 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:01:54,438 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:01:56,336 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 17:02:34,580 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:02:35,902 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:02:38,236 INFO basehttp: "GET / HTTP/1.1" 200 7399
+2023-08-09 17:02:39,434 INFO basehttp: "GET / HTTP/1.1" 200 7399
+2023-08-09 17:02:42,615 INFO basehttp: "GET / HTTP/1.1" 200 7399
+2023-08-09 17:02:42,632 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:02:44,115 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:02:46,168 INFO basehttp: "GET / HTTP/1.1" 200 7395
+2023-08-09 17:02:52,932 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:02:54,347 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:02:55,661 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:02:56,930 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:03:00,150 INFO basehttp: "GET / HTTP/1.1" 200 7810
+2023-08-09 17:03:01,173 INFO basehttp: "GET / HTTP/1.1" 200 7810
+2023-08-09 17:03:34,313 INFO autoreload: /app/app/models.py changed, reloading.
+2023-08-09 17:03:35,635 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:03:40,058 INFO autoreload: /app/app/models.py changed, reloading.
+2023-08-09 17:03:41,566 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:03:47,037 INFO autoreload: /app/app/migrations/0001_initial.py changed, reloading.
+2023-08-09 17:03:48,492 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:04:03,402 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:04:04,673 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:04:06,758 INFO basehttp: "GET / HTTP/1.1" 200 7810
+2023-08-09 17:04:07,730 INFO basehttp: "GET / HTTP/1.1" 200 7810
+2023-08-09 17:04:13,299 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:04:14,684 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:04:15,974 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:04:17,314 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:05:21,968 INFO autoreload: /app/app/models.py changed, reloading.
+2023-08-09 17:05:23,442 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:05:25,808 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:05:27,282 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:05:33,848 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:05:35,206 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:05:36,927 INFO basehttp: "GET / HTTP/1.1" 200 8229
+2023-08-09 17:05:57,176 INFO basehttp: "GET / HTTP/1.1" 200 8208
+2023-08-09 17:07:48,492 INFO views: Draw_new with POST
+2023-08-09 17:07:48,585 ERROR log: Internal Server Error: /draw
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: table app_draw has no column named number
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/app/views.py", line 41, in draw_spin
+    instance.save()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: table app_draw has no column named number
+2023-08-09 17:07:48,593 ERROR basehttp: "POST /draw HTTP/1.1" 500 146395
+2023-08-09 17:08:02,457 INFO views: Draw_new with POST
+2023-08-09 17:08:02,502 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 17:08:02,517 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 17:08:11,690 INFO views: Draw with GET for id 10
+2023-08-09 17:08:11,698 INFO views: Prize 12, PREMIO 4, False
+2023-08-09 17:08:11,712 INFO basehttp: "GET /10 HTTP/1.1" 200 6440
+2023-08-09 17:08:25,990 INFO basehttp: "GET /?csrfmiddlewaretoken=NuJP3ZhvxdgDyTUIQ1R3TNaP4BXeOfZBngBFuINBzPKBHHb5rhVpOtn3RLIMapkR HTTP/1.1" 200 8056
+2023-08-09 17:10:01,215 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:10:27,900 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:11:12,497 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:11:15,308 INFO basehttp: "GET / HTTP/1.1" 200 8056
+2023-08-09 17:11:42,567 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-09 17:11:42,645 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-09 17:11:42,758 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-09 17:11:42,769 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-09 17:11:42,774 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-09 17:11:42,780 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 17:11:42,788 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-09 17:11:42,789 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-09 17:11:42,841 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:11:42,843 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:12:28,088 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:13:11,341 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:13:15,728 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2023-08-09 17:13:15,818 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:13:15,898 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-08-09 17:13:15,941 INFO basehttp: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2023-08-09 17:13:15,942 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-09 17:13:15,962 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-09 17:13:15,971 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:17:42,761 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:19:53,252 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:19:56,302 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:19:56,404 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-09 17:19:56,421 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-09 17:19:56,422 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-09 17:19:56,423 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-08-09 17:19:56,424 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 17:19:56,440 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-09 17:19:56,505 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-09 17:19:56,525 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-09 17:19:56,526 INFO basehttp: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2023-08-09 17:19:56,539 INFO basehttp: "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:19:56,540 INFO basehttp: "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:19:56,542 INFO basehttp: "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2023-08-09 17:20:06,139 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 17:20:06,255 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:20:06,269 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2023-08-09 17:20:06,272 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+2023-08-09 17:20:06,288 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6874
+2023-08-09 17:20:06,291 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+2023-08-09 17:20:06,296 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+2023-08-09 17:20:06,300 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 200 7664
+2023-08-09 17:20:06,309 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+2023-08-09 17:20:06,316 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2023-08-09 17:20:06,338 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2023-08-09 17:20:06,388 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2023-08-09 17:20:06,450 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2023-08-09 17:20:09,672 INFO basehttp: "GET /admin/app/ HTTP/1.1" 200 3545
+2023-08-09 17:20:11,234 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 17:20:11,332 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:20:12,916 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-09 17:20:13,006 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:20:13,017 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+2023-08-09 17:20:13,650 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 17:20:13,750 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:20:14,553 INFO basehttp: "GET /admin/app/ HTTP/1.1" 200 3545
+2023-08-09 17:20:15,745 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:20:21,181 INFO basehttp: "GET / HTTP/1.1" 200 7298
+2023-08-09 17:20:21,306 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1127
+2023-08-09 17:20:45,019 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:20:46,552 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:20:48,844 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:20:50,131 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:20:51,492 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:20:52,879 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:20:54,208 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:20:55,529 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:21:03,157 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:21:04,552 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:21:06,817 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:21:08,249 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 17:21:08,345 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:21:17,682 INFO views: Draw_new with POST
+2023-08-09 17:21:17,718 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 17:21:17,734 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 17:21:27,146 INFO views: Draw with GET for id 11
+2023-08-09 17:21:27,154 INFO views: Prize 8, FREE T-SHIRT!, True
+2023-08-09 17:21:27,169 INFO basehttp: "GET /11 HTTP/1.1" 200 7003
+2023-08-09 17:21:28,277 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10470
+2023-08-09 17:21:28,351 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:21:51,024 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:21:52,680 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:21:55,942 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10388
+2023-08-09 17:21:56,006 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:21:58,502 INFO basehttp: "GET /admin/app/draw/11/change/ HTTP/1.1" 200 11588
+2023-08-09 17:21:58,623 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 200 8804
+2023-08-09 17:21:58,662 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+2023-08-09 17:21:58,664 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2023-08-09 17:21:58,664 INFO basehttp: "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19634
+2023-08-09 17:21:58,666 INFO basehttp: "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2023-08-09 17:21:58,683 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+2023-08-09 17:21:58,704 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:21:58,791 INFO basehttp: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2023-08-09 17:21:58,791 INFO basehttp: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2023-08-09 17:22:01,157 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10388
+2023-08-09 17:22:21,665 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:22:23,172 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:22:24,476 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:22:25,802 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:22:27,073 INFO autoreload: /app/app/admin.py changed, reloading.
+2023-08-09 17:22:28,641 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:22:28,951 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10059
+2023-08-09 17:22:29,014 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:22:29,913 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10059
+2023-08-09 17:22:30,035 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:22:36,599 INFO basehttp: "GET /admin/app/draw/11/change/ HTTP/1.1" 200 11588
+2023-08-09 17:22:36,686 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:22:41,808 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10059
+2023-08-09 17:23:08,758 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10059
+2023-08-09 17:23:08,842 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:23:09,882 INFO basehttp: "GET /admin/app/prize/ HTTP/1.1" 200 14109
+2023-08-09 17:23:09,962 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:23:09,983 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2023-08-09 17:23:11,959 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8799
+2023-08-09 17:23:12,031 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:23:14,804 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10059
+2023-08-09 17:23:14,890 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:23:31,640 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:23:33,021 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:23:34,337 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 17:23:35,897 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 17:23:36,678 INFO views: Draw with GET for id 11
+2023-08-09 17:23:36,689 INFO views: Prize 8, FREE T-SHIRT!, True
+2023-08-09 17:23:36,722 INFO basehttp: "GET /11 HTTP/1.1" 200 7003
+2023-08-09 17:23:40,358 INFO basehttp: "GET / HTTP/1.1" 200 7675
+2023-08-09 17:23:41,190 INFO basehttp: "GET / HTTP/1.1" 200 7675
+2023-08-09 17:23:45,967 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:47,322 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:48,168 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:48,383 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:48,612 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:48,987 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:23:59,200 INFO views: Draw_new with POST
+2023-08-09 17:23:59,245 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 17:23:59,257 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 17:24:08,391 INFO views: Draw with GET for id 12
+2023-08-09 17:24:08,403 INFO views: Prize 9, PS5, False
+2023-08-09 17:24:08,420 INFO basehttp: "GET /12 HTTP/1.1" 200 6440
+2023-08-09 17:24:16,089 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7668
+2023-08-09 17:24:17,907 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10584
+2023-08-09 17:24:18,003 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:24:23,139 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 200 5738
+2023-08-09 17:24:23,227 INFO basehttp: "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+2023-08-09 17:24:25,491 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 302 0
+2023-08-09 17:24:25,586 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7672
+2023-08-09 17:24:25,661 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:24:28,473 INFO basehttp: "GET /?csrfmiddlewaretoken=PhKukIzI2yUgx6vDBiaubnuHstgzLlsFs0nkitawjiO1r87bvhI50dv1ehTwtbcr HTTP/1.1" 200 7675
+2023-08-09 17:24:47,108 INFO views: Draw_new with POST
+2023-08-09 17:24:47,155 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 17:24:47,172 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 17:24:56,323 INFO views: Draw with GET for id 13
+2023-08-09 17:24:56,331 INFO views: Prize 8, FREE T-SHIRT!, True
+2023-08-09 17:24:56,345 INFO basehttp: "GET /13 HTTP/1.1" 200 7003
+2023-08-09 17:25:06,490 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10067
+2023-08-09 17:25:06,567 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 17:25:15,000 INFO basehttp: "GET /admin/logout/ HTTP/1.1" 200 1532
+2023-08-09 17:25:16,435 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-09 17:25:16,473 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-09 17:25:16,524 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2023-08-09 17:25:23,456 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2023-08-09 17:25:23,502 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7595
+2023-08-09 17:25:25,275 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10067
+2023-08-09 17:25:25,358 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:11:53,278 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10067
+2023-08-09 18:11:53,407 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-09 18:11:53,408 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,418 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-09 18:11:53,430 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,443 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,444 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2023-08-09 18:11:53,449 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,463 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,465 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,467 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,478 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 18:11:53,481 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,489 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2023-08-09 18:11:53,491 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-09 18:11:53,517 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:11:53,577 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2023-08-09 18:11:53,579 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-08-09 18:11:53,580 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-09 18:11:53,585 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2023-08-09 18:11:53,691 WARNING log: Not Found: /favicon.ico
+2023-08-09 18:11:53,694 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-09 18:12:01,818 INFO basehttp: "GET / HTTP/1.1" 200 7675
+2023-08-09 18:12:52,698 INFO autoreload: /app/app/forms.py changed, reloading.
+2023-08-09 18:12:54,934 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 18:13:00,054 INFO basehttp: "GET / HTTP/1.1" 200 8056
+2023-08-09 18:13:03,659 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10067
+2023-08-09 18:13:03,731 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:13:03,828 WARNING log: Not Found: /favicon.ico
+2023-08-09 18:13:03,841 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-09 18:13:05,143 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 10067
+2023-08-09 18:13:05,210 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:13:06,801 INFO basehttp: "GET /admin/logout/ HTTP/1.1" 200 1532
+2023-08-09 18:13:08,598 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-09 18:13:08,637 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-09 18:13:08,708 INFO basehttp: "GET /static/admin/css/login.css HTTP/1.1" 200 939
+2023-08-09 18:13:14,895 INFO basehttp: "GET /admin/ HTTP/1.1" 302 0
+2023-08-09 18:13:14,930 INFO basehttp: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2217
+2023-08-09 18:13:21,616 INFO basehttp: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2023-08-09 18:13:21,677 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7595
+2023-08-09 18:13:21,753 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-08-09 18:13:21,805 INFO basehttp: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2023-08-09 18:13:21,806 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-09 18:13:27,573 INFO basehttp: "GET / HTTP/1.1" 200 8056
+2023-08-09 18:14:40,724 INFO basehttp: "GET / HTTP/1.1" 200 8056
+2023-08-09 18:14:44,003 INFO views: Draw_new with POST
+2023-08-09 18:14:44,043 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 18:14:44,057 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 18:14:53,192 INFO views: Draw with GET for id 14
+2023-08-09 18:14:53,205 INFO views: Prize 6, BAD LUCK!, False
+2023-08-09 18:14:53,220 INFO basehttp: "GET /14 HTTP/1.1" 200 6440
+2023-08-09 18:14:56,241 INFO basehttp: "GET /?csrfmiddlewaretoken=lSJNsCrJ0AiZe63UV0xaB8wOvM27CX55dIgb4eoHKBowKEythvHXh4Ld6lHcK37t HTTP/1.1" 200 8056
+2023-08-09 18:15:15,045 INFO views: Draw_new with POST
+2023-08-09 18:15:15,085 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 18:15:15,098 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 18:15:24,271 INFO views: Draw with GET for id 15
+2023-08-09 18:15:24,283 INFO views: Prize 14, PREMIO 2, True
+2023-08-09 18:15:24,299 INFO basehttp: "GET /15 HTTP/1.1" 200 7170
+2023-08-09 18:15:31,600 INFO basehttp: "GET /?csrfmiddlewaretoken=C7XlSzJM38Bm5NUZ6AyHDbMOGps74h6KuXuJubGKN9HTBlpys5Iuj71dhY7ccn88 HTTP/1.1" 200 8056
+2023-08-09 18:16:02,447 INFO views: Draw_new with POST
+2023-08-09 18:16:02,485 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 18:16:02,500 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 18:16:11,656 INFO views: Draw with GET for id 16
+2023-08-09 18:16:11,668 INFO views: Prize 13, PREMIO 3, False
+2023-08-09 18:16:11,688 INFO basehttp: "GET /16 HTTP/1.1" 200 6440
+2023-08-09 18:16:14,178 INFO basehttp: "GET /?csrfmiddlewaretoken=4RlNTEYyfJlWB7HWrCEid33WumYn7jEnWHSbvgVwZKrt7FcvN7O5TZil5VDsfpGL HTTP/1.1" 200 8056
+2023-08-09 18:16:19,332 INFO views: Draw_new with POST
+2023-08-09 18:16:19,378 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 18:16:19,395 INFO basehttp: "POST /draw HTTP/1.1" 200 6053
+2023-08-09 18:16:24,037 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 12198
+2023-08-09 18:16:24,138 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:16:28,533 INFO views: Draw with GET for id 17
+2023-08-09 18:16:28,544 INFO views: Prize 7, NOTHING ..., False
+2023-08-09 18:16:28,558 INFO basehttp: "GET /17 HTTP/1.1" 200 6440
+2023-08-09 18:16:29,978 INFO basehttp: "GET /?csrfmiddlewaretoken=fjXzKDUjq9RzEYozQ6eU30FIPI6uLP8E79uXmfRhaaX6awT8cBoHJWU7qhLzTVa2 HTTP/1.1" 200 8056
+2023-08-09 18:16:36,115 INFO views: Draw_new with POST
+2023-08-09 18:16:36,159 ERROR draw: UniqueCode matching query does not exist.
+2023-08-09 18:16:36,174 INFO basehttp: "POST /draw HTTP/1.1" 200 6054
+2023-08-09 18:16:45,344 INFO views: Draw with GET for id 18
+2023-08-09 18:16:45,352 INFO views: Prize 6, BAD LUCK!, False
+2023-08-09 18:16:45,367 INFO basehttp: "GET /18 HTTP/1.1" 200 6442
+2023-08-09 18:16:47,125 INFO basehttp: "GET /?csrfmiddlewaretoken=f4SCUwNehnHFGE3dTNT6N4dVt92RjT7v7Up0w8Kc1oNcccyMfi3Tt0sk4IHWrZ9T HTTP/1.1" 200 8056
+2023-08-09 18:16:50,720 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 12708
+2023-08-09 18:16:50,806 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:16:54,773 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 200 6310
+2023-08-09 18:16:54,835 INFO basehttp: "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+2023-08-09 18:16:55,974 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 302 0
+2023-08-09 18:16:56,067 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7672
+2023-08-09 18:16:56,159 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:16:56,191 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2023-08-09 18:16:59,375 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7446
+2023-08-09 18:18:59,915 INFO basehttp: "GET /?csrfmiddlewaretoken=f4SCUwNehnHFGE3dTNT6N4dVt92RjT7v7Up0w8Kc1oNcccyMfi3Tt0sk4IHWrZ9T HTTP/1.1" 200 8056
+2023-08-09 18:20:15,732 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 18:20:15,854 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 18:54:53,310 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 18:54:55,896 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7446
+2023-08-09 18:54:55,979 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-09 18:54:55,986 INFO basehttp: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2023-08-09 18:54:55,993 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 18:54:56,004 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-09 18:54:56,012 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-09 18:54:56,017 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-09 18:54:56,048 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-09 18:54:56,048 INFO basehttp: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2023-08-09 18:54:56,052 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-09 18:54:58,601 INFO basehttp: "GET /admin/ HTTP/1.1" 200 7446
+2023-08-09 18:55:07,051 INFO basehttp: "GET /admin/logout/ HTTP/1.1" 200 1532
+2023-08-09 18:56:05,018 INFO basehttp: "GET / HTTP/1.1" 200 8056

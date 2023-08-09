@@ -7,13 +7,15 @@ from django.db.models.signals import post_save
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-
 class Draw(models.Model):
     """
     Class to represent each valid draw that happened in the system.
     """
-    Info = models.CharField(max_length=254)
-    code = models.CharField(max_length=8)
+    name    = models.CharField(max_length=254)
+    phone   = models.CharField(max_length=254)
+    number  = models.CharField(max_length=254)
+    code    = models.CharField(max_length=8)
+
     sent = models.BooleanField(default=False)
     rotation = models.IntegerField(default=0)
     date = models.DateTimeField(blank=True, null=True)
@@ -21,7 +23,7 @@ class Draw(models.Model):
     retry_used = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.Info} - {self.code}"
+        return f"{self.name} - {self.code}"
 
     def use_retry(self):
         self.retry_used = True

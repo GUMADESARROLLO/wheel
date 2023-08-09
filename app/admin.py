@@ -4,10 +4,10 @@ from django.contrib import admin
 
 @admin.register(Draw)
 class DrawAdmin(admin.ModelAdmin):
-    list_display = ['id', 'code', 'Info' ,'prize', 'date', 'winner', 'try_again', 'retry_used']
+    list_display = ['id', 'code', 'name','phone','number', 'prize', 'date', 'retry_used']
     list_filter = ['prize__winner', 'prize__try_again', 'retry_used', 'date']
-    search_fields = ['code', 'Info', 'prize__label']
-    list_display_links = ['id', 'date', 'code']
+    search_fields = ['code', 'name','phone','number', 'prize__label']
+    list_display_links = ['code']
 
     def winner(self, obj):
         return obj.prize.winner

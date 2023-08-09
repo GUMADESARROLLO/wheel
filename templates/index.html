@@ -20,16 +20,14 @@
       <h4 class="h4 mb-5 font-weight-normal" style="color: white;">¡Buena suerte!</h4>
     {% else %}
       <p class="h4 mb-5 font-weight-normal" style="color: white;">Ingrese su Nombre  y Telefono a continuación y su código para girar
-        la rueda para tener la oportunidad de ganar! (NOMBRE - 8000-0000)</p>
+        la rueda para tener la oportunidad de ganar!</p>
 
       <p class="h5 mb-5 font-weight-small" style="color: white; display: none;">Demo: Use the code 'ABCDEFGH'</p>
 
       <form class="form-signin" action="{% url 'wheel:draw_spin' %}" method="POST"> {% csrf_token %}
         {% for field in form %}
           <div class="form-group row">
-            <label style="color: white"
-                   class="col-sm-2 col-form-label col-form-label-lg"
-                   for="{{ field.id_for_label }}">{{ field.label }}</label>
+            <label style="color: white" class="col-sm-2 col-form-label col-form-label-lg" for="{{ field.id_for_label }}">{{ field.label }}</label>
             <div class="col-sm-10">
               {{ field|add_class:'form-control form-control-lg' }}
               {% if field.errors  %}
