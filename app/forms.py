@@ -15,7 +15,7 @@ def addclass(field, css):
 class DrawForm(forms.ModelForm):
     class Meta:
         model = Draw
-        fields = ('name','phone','number', 'code',)
+        fields = ('name','phone','ident', 'code',)
 
     def clean(self):
         cleaned_data = super().clean()

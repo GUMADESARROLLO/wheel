@@ -13,7 +13,7 @@ class Draw(models.Model):
     """
     name    = models.CharField(max_length=254)
     phone   = models.CharField(max_length=254)
-    number  = models.CharField(max_length=254)
+    ident  = models.CharField(max_length=254)
     code    = models.CharField(max_length=8)
 
     sent = models.BooleanField(default=False)

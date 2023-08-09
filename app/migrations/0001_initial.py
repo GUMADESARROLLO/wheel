@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('phone', models.CharField(max_length=254)),
-                ('number', models.CharField(max_length=254)),
+                ('ident', models.CharField(max_length=254)),
                 ('code', models.CharField(max_length=8)),
                 ('sent', models.BooleanField(default=False)),
                 ('rotation', models.IntegerField(default=0)),
