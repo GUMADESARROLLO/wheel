@@ -1500,3 +1500,58 @@ django.db.utils.OperationalError: table app_draw has no column named ident
 2023-08-09 20:12:13,592 INFO autoreload: Watching for file changes with StatReloader
 2023-08-09 20:12:34,747 INFO autoreload: /app/app/migrations/0001_initial.py changed, reloading.
 2023-08-09 20:12:36,337 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:20:38,732 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:20:50,748 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:21:02,650 INFO autoreload: /app/app/migrations/0001_initial.py changed, reloading.
+2023-08-09 20:21:04,024 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:21:37,082 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:21:53,949 INFO basehttp: "GET /admin/app/uniquecode/26/change/ HTTP/1.1" 200 8414
+2023-08-09 20:21:54,072 INFO basehttp: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,088 INFO basehttp: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,089 INFO basehttp: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,100 INFO basehttp: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,104 INFO basehttp: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,105 INFO basehttp: "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,135 INFO basehttp: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,136 INFO basehttp: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,137 INFO basehttp: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,148 INFO basehttp: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,154 INFO basehttp: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,172 INFO basehttp: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,179 INFO basehttp: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,194 INFO basehttp: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2023-08-09 20:21:54,197 INFO basehttp: "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,180 INFO basehttp: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,206 INFO basehttp: "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2023-08-09 20:21:54,210 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:21:54,279 INFO basehttp: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2023-08-09 20:21:54,280 INFO basehttp: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2023-08-09 20:21:54,351 WARNING log: Not Found: /favicon.ico
+2023-08-09 20:21:54,354 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-09 20:21:57,542 INFO basehttp: "GET /?csrfmiddlewaretoken=TrZ2gxuDf3Z0qvRiyoI21mogDtymc5yNzR4uGKKO9Hbpx7qkEc3ELntqiPGq4elU HTTP/1.1" 200 8340
+2023-08-09 20:23:03,248 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 11141
+2023-08-09 20:23:03,344 INFO basehttp: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2023-08-09 20:23:03,346 INFO basehttp: "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+2023-08-09 20:23:03,361 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:23:03,411 INFO basehttp: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2023-08-09 20:23:03,470 INFO basehttp: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2023-08-09 20:23:03,512 WARNING log: Not Found: /favicon.ico
+2023-08-09 20:23:03,515 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2619
+2023-08-09 20:23:05,971 INFO basehttp: "GET /?csrfmiddlewaretoken=TrZ2gxuDf3Z0qvRiyoI21mogDtymc5yNzR4uGKKO9Hbpx7qkEc3ELntqiPGq4elU HTTP/1.1" 200 8340
+2023-08-09 20:23:37,289 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 200 5888
+2023-08-09 20:23:37,381 INFO basehttp: "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+2023-08-09 20:23:38,538 INFO basehttp: "POST /admin/app/draw/ HTTP/1.1" 302 0
+2023-08-09 20:23:38,617 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7672
+2023-08-09 20:23:38,711 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:23:38,744 INFO basehttp: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2023-08-09 20:23:41,589 INFO basehttp: "GET /admin/app/draw/ HTTP/1.1" 200 7537
+2023-08-09 20:23:41,672 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:23:42,626 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 8803
+2023-08-09 20:23:42,715 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:23:46,303 INFO basehttp: "POST /admin/app/uniquecode/ HTTP/1.1" 200 5628
+2023-08-09 20:23:47,588 INFO basehttp: "POST /admin/app/uniquecode/ HTTP/1.1" 302 0
+2023-08-09 20:23:47,705 INFO basehttp: "GET /admin/app/uniquecode/ HTTP/1.1" 200 6886
+2023-08-09 20:23:47,787 INFO basehttp: "GET /admin/jsi18n/ HTTP/1.1" 200 3195
+2023-08-09 20:48:00,536 INFO autoreload: Watching for file changes with StatReloader
+2023-08-09 20:48:04,905 INFO basehttp: "GET /?csrfmiddlewaretoken=TrZ2gxuDf3Z0qvRiyoI21mogDtymc5yNzR4uGKKO9Hbpx7qkEc3ELntqiPGq4elU HTTP/1.1" 200 8340
+2023-08-09 20:48:25,594 INFO basehttp: "GET / HTTP/1.1" 200 8340
