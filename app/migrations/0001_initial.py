@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             name='Prize',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('label', models.CharField(max_length=12)),
+                ('label', models.CharField(max_length=50)),
                 ('winner', models.BooleanField(default=False)),
                 ('try_again', models.BooleanField(default=False)),
             ],
