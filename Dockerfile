@@ -4,7 +4,10 @@ FROM python:3.9
 RUN useradd -ms /bin/bash usrWheel
 USER usrWheel
 
-# set environment variables
+# Crear el directorio del entorno virtual y ajustar permisos
+RUN mkdir /home/usrWheel/venv && chown -R usrWheel:usrWheel /home/usrWheel/venv
+
+# Establecer variables de entorno
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV TZ America/Managua
