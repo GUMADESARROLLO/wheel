@@ -8,5 +8,6 @@ services:
     container_name: cn_app_wheel_pro
     volumes:
       - .:/app
+      - /etc/localtime:/etc/localtime
     ports:
       - "8001:8000"
