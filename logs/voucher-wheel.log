@@ -1980,3 +1980,14 @@ django.db.utils.OperationalError: table app_draw has no column named ident
 2023-08-11 14:20:00,063 WARNING log: Not Found: /favicon.ico
 2023-08-11 14:20:00,064 WARNING basehttp: "GET /favicon.ico HTTP/1.1" 404 2631
 2023-08-11 14:41:10,189 INFO basehttp: "GET / HTTP/1.1" 200 8340
+2023-08-11 09:02:23,083 INFO autoreload: Watching for file changes with StatReloader
+2023-08-11 09:02:40,268 INFO basehttp: "GET / HTTP/1.1" 200 8340
+2023-08-11 09:02:40,345 INFO basehttp: "GET /static/css/styles.css HTTP/1.1" 200 1055
+2023-08-11 09:02:40,359 INFO basehttp: "GET /static/js/confetti.js HTTP/1.1" 200 7222
+2023-08-11 09:02:40,361 INFO basehttp: "GET /static/js/script.js HTTP/1.1" 200 4688
+2023-08-11 09:02:40,824 INFO basehttp: "GET /static/media/roulette.mp3 HTTP/1.1" 200 95433
+2023-08-11 09:02:40,827 INFO basehttp: "GET /static/img/wheel.png HTTP/1.1" 200 407425
+2023-08-11 09:02:40,838 INFO basehttp: "GET /static/img/outwheel.png HTTP/1.1" 200 440976
+2023-08-11 09:02:40,883 INFO basehttp: "GET /static/img/favicon.ico/android-icon-192x192.png HTTP/1.1" 200 17042
+2023-08-11 09:02:40,924 INFO basehttp: "GET /static/img/favicon.ico/favicon-16x16.png HTTP/1.1" 200 1534
+2023-08-11 09:07:42,164 INFO autoreload: Watching for file changes with StatReloader
